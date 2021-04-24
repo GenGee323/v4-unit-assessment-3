@@ -148,4 +148,4 @@ let shoes = inventory()
 
   //CODE HERE
 
-shoes.addToProducts('item')
+shoes.addToProducts('shoe')

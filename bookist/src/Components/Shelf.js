@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const Shelf = props => {
-    let mappedTitles = props.shelf.map ((e, i) => {
-        return (
-            <span key = {i}>{e}</span>
-        )
-    })
-    mappedTitles.unshift(<button onClick={() => props.clearShelf()}> clear shelf </button>)
-    return mappedTitles
+class Shelf extends Component {
+    constructor() {
+        super()
+    }
+
+    render() {
+        let bookTitles = this.props.shelf.map((book) => {
+        return <p>{book.title}</p>
+        })
+    return (
+        <div>
+            <h2>Your Shelf</h2>
+            <button onClick={this.props.clearShelf}>clear shelf</button>
+            <div className="shelf">{bookTitles}</div>
+        </div>
+    )
+    }
 }
 
-export default Shelf;
+export default Shelf

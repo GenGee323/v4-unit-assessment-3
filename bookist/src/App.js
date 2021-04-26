@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css';
 import Header from './Components/Header'
-import Booklist from './Components/Booklist'
+import BookList from './Components/BookList'
 import Shelf from './Components/Shelf'
-import Searchbar from './Components/Searchbar'
+import SearchBar from './Components/SearchBar'
 import data from './data'
 
 class App extends React.Component {
@@ -67,10 +67,10 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <section className="search-area">
-          <Searchbar filterBooks={this.filterBooks} clearSearch={this.clearSearch} updateInput={this.updateInput} input={this.state.input}/>
+          <SearchBar filterBooks={this.filterBooks} clearSearch={this.clearSearch} updateInput={this.updateInput} input={this.state.input}/>
         </section>
         <section className="main">
-          <Booklist books={this.state.books} addToShelf={this.addToShelf} />
+          <BookList books={this.state.books} addToShelf={this.addToShelf} />
           <Shelf shelf={this.state.shelf} clearShelf={this.clearShelf} />
         </section>
       </div>
